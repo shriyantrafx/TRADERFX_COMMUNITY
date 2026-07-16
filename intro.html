@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TradersFX Community</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+background:#050914;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+/* Background chart effect */
+
+.chart{
+position:absolute;
+width:120%;
+height:120%;
+background:
+linear-gradient(120deg,transparent 45%,rgba(0,191,255,0.15),transparent 55%),
+linear-gradient(45deg,transparent 45%,rgba(255,255,255,0.08),transparent 55%);
+animation:move 8s infinite linear;
+}
+
+@keyframes move{
+from{
+transform:translateX(-50px);
+}
+to{
+transform:translateX(50px);
+}
+}
+
+
+.container{
+position:relative;
+text-align:center;
+z-index:2;
+}
+
+
+.logo{
+font-size:70px;
+font-weight:900;
+color:#00bfff;
+text-shadow:0 0 25px #00bfff;
+}
+
+
+h1{
+font-size:35px;
+margin-top:10px;
+}
+
+
+p{
+color:#ccc;
+margin:15px 0 30px;
+font-size:18px;
+}
+
+
+.market{
+display:flex;
+gap:15px;
+justify-content:center;
+margin-bottom:35px;
+}
+
+
+.box{
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(0,191,255,0.4);
+padding:15px;
+border-radius:15px;
+width:100px;
+box-shadow:0 0 15px rgba(0,191,255,.3);
+}
+
+
+button{
+width:220px;
+padding:15px;
+margin:10px;
+border-radius:30px;
+border:none;
+font-size:17px;
+cursor:pointer;
+}
+
+
+.join{
+background:#00bfff;
+color:white;
+}
+
+
+.login{
+background:white;
+color:#050914;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="chart"></div>
+
+
+<div class="container">
+
+<div class="logo">
+TFX
+</div>
+
+<h1>
+TradersFX Community
+</h1>
+
+<p>
+Learn • Trade • Grow 📈
+</p>
+
+
+<div class="market">
+
+<div class="box">
+🟡 Gold
+<br>
+XAUUSD
+</div>
+
+
+<div class="box">
+₿ Bitcoin
+<br>
+BTC
+</div>
+
+
+<div class="box">
+Ξ Ethereum
+<br>
+ETH
+</div>
+
+</div>
+
+
+<button class="join" onclick="location.href='signup.html'">
+Join Community
+</button>
+
+
+<br>
+
+
+<button class="login" onclick="location.href='login.html'">
+Sign In
+</button>
+
+
+</div>
+
+
+</body>
+</html>
