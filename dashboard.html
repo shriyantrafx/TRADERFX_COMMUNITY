@@ -1,78 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard - TradersFX Community</title>
-
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TradersFX Dashboard</title>
 <style>
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#0b0f1a;
-color:white;
-}
-
-header{
-background:#111827;
-padding:15px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-header h2{
-color:#00bfff;
-margin:0;
-}
-
-.container{
-padding:20px;
-}
-
-.card{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-margin-bottom:20px;
-}
-
-button{
-background:#00bfff;
-color:white;
-border:none;
-padding:10px 20px;
-border-radius:8px;
-cursor:pointer;
-}
-</style>
-</head>
-
+body{margin:0;font-family:Arial;background:#0b0f1a;color:#fff}
+header{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;background:#111827;position:sticky;top:0}
+.logo{color:#00bfff;font-weight:bold}
+.search{margin:15px;padding:12px;border-radius:10px;background:#1e293b}
+.card{background:#1e293b;margin:15px;padding:15px;border-radius:12px}
+.actions button{margin-right:8px}
+nav{position:fixed;bottom:0;left:0;right:0;background:#111827;display:flex;justify-content:space-around;padding:12px}
+button{background:#00bfff;color:#fff;border:none;padding:10px 14px;border-radius:8px}
+</style></head>
 <body>
-
-<header>
-<h2>TradersFX Community</h2>
-<button>Logout</button>
-</header>
-
-<div class="container">
-
-<div class="card">
-<h3>Welcome Trader 👋</h3>
-<p>Welcome to your dashboard.</p>
-</div>
-
-<div class="card">
-<h3>Community</h3>
-<p>Community posts will appear here.</p>
-</div>
-
-<div class="card">
-<h3>Trading Signals</h3>
-<p>Signals will be added here.</p>
-</div>
-
-</div>
-
-</body>
-</html>
+<header><div class="logo">TradersFX Community</div><button onclick="alert('Theme coming soon')">🌙</button></header>
+<div class="search">🔍 Search traders...</div>
+<div class="card"><h3>📈 Admin Signal</h3><p>XAUUSD BUY<br>Entry: 3350<br>TP:3365<br>SL:3340</p><div class="actions"><button>❤️ Like</button><button>💬 Comment</button><button>📤 Share</button></div></div>
+<div class="card"><h3>👤 Community Feed</h3><p>Members' posts will appear here.</p></div>
+<nav><span>🏠</span><span>🎥</span><span>➕</span><span>💬</span><span>👤</span></nav>
+</body></html>
