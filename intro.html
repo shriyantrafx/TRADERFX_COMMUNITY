@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,107 +13,155 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Arial, sans-serif;
 }
 
 body{
 height:100vh;
-background:#050914;
+background:#020617;
 color:white;
-display:flex;
-align-items:center;
-justify-content:center;
 overflow:hidden;
 }
 
-/* Background chart effect */
 
-.chart{
+/* Background Glow */
+
+body::before{
+content:"";
 position:absolute;
-width:120%;
-height:120%;
-background:
-linear-gradient(120deg,transparent 45%,rgba(0,191,255,0.15),transparent 55%),
-linear-gradient(45deg,transparent 45%,rgba(255,255,255,0.08),transparent 55%);
-animation:move 8s infinite linear;
-}
-
-@keyframes move{
-from{
-transform:translateX(-50px);
-}
-to{
-transform:translateX(50px);
-}
+width:600px;
+height:600px;
+background:#006eff;
+filter:blur(180px);
+opacity:.25;
+top:-200px;
+left:-200px;
 }
 
 
 .container{
+
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-around;
+padding:40px;
 position:relative;
-text-align:center;
-z-index:2;
+
+}
+
+
+/* Left Side */
+
+.left{
+
+max-width:500px;
+
 }
 
 
 .logo{
+
 font-size:70px;
 font-weight:900;
-color:#00bfff;
-text-shadow:0 0 25px #00bfff;
+color:white;
+letter-spacing:5px;
+
+text-shadow:
+0 0 10px #00bfff,
+0 0 30px #00bfff;
+
 }
 
 
 h1{
-font-size:35px;
-margin-top:10px;
+
+font-size:45px;
+margin-top:20px;
+
+}
+
+
+h1 span{
+
+color:#00bfff;
+
 }
 
 
 p{
-color:#ccc;
-margin:15px 0 30px;
+
+color:#cbd5e1;
 font-size:18px;
+margin:20px 0;
+
 }
 
 
-.market{
-display:flex;
-gap:15px;
-justify-content:center;
-margin-bottom:35px;
-}
-
-
-.box{
-background:rgba(255,255,255,0.08);
-border:1px solid rgba(0,191,255,0.4);
-padding:15px;
-border-radius:15px;
-width:100px;
-box-shadow:0 0 15px rgba(0,191,255,.3);
-}
-
+/* Buttons */
 
 button{
-width:220px;
-padding:15px;
-margin:10px;
+
+padding:15px 35px;
 border-radius:30px;
-border:none;
 font-size:17px;
 cursor:pointer;
+margin-right:10px;
+
 }
 
 
 .join{
+
 background:#00bfff;
+border:none;
 color:white;
+box-shadow:0 0 20px #00bfff;
+
 }
 
 
 .login{
-background:white;
-color:#050914;
+
+background:transparent;
+border:1px solid white;
+color:white;
+
+}
+
+
+
+/* Market Cards */
+
+.market{
+
+display:flex;
+gap:15px;
+margin-top:30px;
+
+}
+
+
+.card{
+
+background:rgba(255,255,255,.08);
+border:1px solid rgba(0,191,255,.4);
+
+padding:15px;
+border-radius:15px;
+
+width:110px;
+text-align:center;
+
+backdrop-filter:blur(10px);
+
+}
+
+
+.card b{
+
+color:#00bfff;
+
 }
 
 
@@ -123,64 +172,338 @@ color:#050914;
 
 <body>
 
-<div class="chart"></div>
-
 
 <div class="container">
+
+
+<div class="left">
 
 <div class="logo">
 TFX
 </div>
 
+
 <h1>
-TradersFX Community
+Welcome To <span>TradersFX</span>
 </h1>
 
+
 <p>
-Learn • Trade • Grow 📈
+A premium trading community where traders learn, share and grow together.
 </p>
 
 
-<div class="market">
-
-<div class="box">
-🟡 Gold
-<br>
-XAUUSD
-</div>
-
-
-<div class="box">
-₿ Bitcoin
-<br>
-BTC
-</div>
-
-
-<div class="box">
-Ξ Ethereum
-<br>
-ETH
-</div>
-
-</div>
-
-
-<button class="join" onclick="location.href='signup.html'">
+<button class="join">
 Join Community
 </button>
 
 
-<br>
-
-
-<button class="login" onclick="location.href='login.html'">
+<button class="login">
 Sign In
 </button>
+
+
+
+<div class="market">
+
+<div class="card">
+🟡 Gold
+<br>
+<b>XAUUSD</b>
+</div>
+
+
+<div class="card">
+₿ Crypto
+<br>
+<b>BTC</b>
+</div>
+
+
+<div class="card">
+📈 Forex
+<br>
+<b>EUR/USD</b>
+</div>
 
 
 </div>
 
 
+</div>
+<style>
+
+.right{
+
+position:relative;
+}
+
+
+.phone{
+
+width:320px;
+height:600px;
+
+background:#0f172a;
+
+border:3px solid #00bfff;
+
+border-radius:35px;
+
+padding:20px;
+
+box-shadow:
+0 0 30px #00bfff,
+inset 0 0 20px rgba(0,191,255,.3);
+
+animation:float 4s infinite ease-in-out;
+
+}
+
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-20px);
+}
+
+}
+
+
+
+.screen{
+
+background:#020617;
+
+height:100%;
+
+border-radius:25px;
+
+padding:20px;
+
+}
+
+
+
+.screen h2{
+
+color:#00bfff;
+
+}
+
+
+
+.chart{
+
+height:150px;
+
+margin-top:20px;
+
+border-radius:15px;
+
+background:
+
+linear-gradient(
+135deg,
+transparent 40%,
+#00bfff 41%,
+transparent 43%
+),
+
+linear-gradient(
+45deg,
+transparent 45%,
+#22c55e 46%,
+transparent 48%
+);
+
+box-shadow:0 0 20px rgba(0,191,255,.5);
+
+}
+
+
+
+
+.price{
+
+margin-top:20px;
+
+display:flex;
+
+justify-content:space-between;
+
+background:#111827;
+
+padding:12px;
+
+border-radius:12px;
+
+}
+
+
+
+.green{
+
+color:#22c55e;
+
+}
+
+
+.blue{
+
+color:#00bfff;
+
+}
+
+
+.coin{
+
+position:absolute;
+
+font-size:40px;
+
+animation:move 5s infinite;
+
+}
+
+
+@keyframes move{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-30px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+.b1{
+
+right:-50px;
+top:50px;
+
+}
+
+
+.b2{
+
+left:-40px;
+bottom:100px;
+
+}
+
+
+</style>
+
+
+
+<div class="right">
+
+
+<div class="coin b1">
+₿
+</div>
+
+
+<div class="coin b2">
+📈
+</div>
+
+
+
+<div class="phone">
+
+
+<div class="screen">
+
+
+<h2>
+TradersFX
+</h2>
+
+
+<div class="chart"></div>
+
+
+<div class="price">
+
+<span>
+XAUUSD
+</span>
+
+<span class="green">
++2.45%
+</span>
+
+
+</div>
+
+
+<div class="price">
+
+<span>
+BTC/USD
+</span>
+
+<span class="blue">
+67250
+</span>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<script>
+
+
+document.querySelector(".join").onclick=function(){
+
+window.location.href="signup.html";
+
+}
+
+
+document.querySelector(".login").onclick=function(){
+
+window.location.href="login.html";
+
+}
+
+
+</script>
+
+
 </body>
+
 </html>
+  
