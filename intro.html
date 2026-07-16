@@ -620,4 +620,47 @@ draw();ctx.shadowBlur = 0;
 </body>
 
 </html>
-  
+ .logo{
+    font-size:70px;
+    font-weight:900;
+    color:white;
+    letter-spacing:8px;
+    animation:logoShow 2s ease;
+    text-shadow:
+    0 0 10px #00bfff,
+    0 0 30px #00bfff,
+    0 0 60px #006eff;
+}
+
+
+@keyframes logoShow{
+
+0%{
+    opacity:0;
+    transform:scale(0.5);
+    filter:blur(10px);
+}
+
+100%{
+    opacity:1;
+    transform:scale(1);
+    filter:blur(0);
+}
+
+} 
+h1 span{
+animation:bluePulse 2s infinite;
+}
+
+
+@keyframes bluePulse{
+
+0%,100%{
+text-shadow:0 0 5px #00bfff;
+}
+
+50%{
+text-shadow:0 0 25px #00bfff;
+}
+
+}
