@@ -501,7 +501,120 @@ window.location.href="login.html";
 
 
 </script>
+<canvas id="candleChart"></canvas>
 
+<style>
+
+#candleChart{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+opacity:0.45;
+}
+
+</style>
+
+
+<script>
+
+const canvas = document.getElementById("candleChart");
+const ctx = canvas.getContext("2d");
+
+function resize(){
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+}
+
+resize();
+
+window.addEventListener("resize",resize);
+
+
+let candles=[];
+
+
+function createCandle(){
+
+let open = Math.random()*200+100;
+
+let close = open + (Math.random()-0.5)*80;
+
+candles.push({
+
+x:canvas.width,
+
+open:open,
+
+close:close,
+
+high:Math.max(open,close)+Math.random()*30,
+
+low:Math.min(open,close)-Math.random()*30
+
+});
+
+
+if(candles.length>50){
+candles.shift();
+}
+
+}
+
+
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+
+candles.forEach(c=>{
+
+let color=c.close>c.open ? "#22c55e" : "#ef4444";
+
+
+ctx.strokeStyle=color;
+ctx.fillStyle=color;
+
+
+ctx.beginPath();
+
+ctx.moveTo(c.x,c.high);
+ctx.lineTo(c.x,c.low);
+
+ctx.stroke();
+
+
+let height=c.close-c.open;
+
+
+ctx.fillRect(
+c.x-5,
+c.open,
+10,
+height
+);
+
+
+c.x-=2;
+
+
+});
+
+
+requestAnimationFrame(draw);
+
+}
+
+
+setInterval(createCandle,400);
+
+draw();
+
+
+</script>
 
 </body>
 
