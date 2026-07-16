@@ -83,7 +83,24 @@ Already have an account?
 </div>
 
 <script>
-function signup(){
+import { auth } from "./firebase.js";
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+window.signup = function(){
+
+let email = document.querySelector('input[type="email"]').value;
+let password = document.querySelector('input[type="password"]').value;
+
+createUserWithEmailAndPassword(auth, email, password)
+.then(() => {
+    alert("Account Created Successfully 🚀");
+    window.location.href = "login.html";
+})
+.catch((error) => {
+    alert(error.message);
+});
+
+}
 alert("Account system will be connected soon 🚀");
 }
 </script>
