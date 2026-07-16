@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community - TradersFX</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#0b0f1a;
+color:white;
+}
+
+header{
+background:#111827;
+padding:15px;
+text-align:center;
+font-size:24px;
+color:#00bfff;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+padding:20px;
+}
+
+.post{
+background:#1e293b;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+}
+
+textarea{
+width:100%;
+height:100px;
+padding:10px;
+border-radius:8px;
+border:none;
+margin-bottom:10px;
+}
+
+button{
+padding:10px 20px;
+background:#00bfff;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>TradersFX Community</header>
+
+<div class="container">
+
+<h2>Create Post</h2>
+
+<textarea id="postText" placeholder="Share your trading idea..."></textarea>
+
+<button onclick="addPost()">Post</button>
+
+<div id="posts"></div>
+
+</div>
+
+<script>
+function addPost(){
+let text=document.getElementById("postText").value;
+
+if(text===""){
+alert("Write something first!");
+return;
+}
+
+document.getElementById("posts").innerHTML=
+"<div class='post'>"+text+"</div>"+
+document.getElementById("posts").innerHTML;
+
+document.getElementById("postText").value="";
+}
+</script>
+
+</body>
+</html>
