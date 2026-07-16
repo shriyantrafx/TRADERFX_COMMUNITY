@@ -84,10 +84,26 @@ Don't have an account?
 </div>
 
 <script>
-function login(){
+import { auth } from "./firebase.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+window.login = function(){
+
+let email = document.querySelector('input[type="email"]').value;
+let password = document.querySelector('input[type="password"]').value;
+
+signInWithEmailAndPassword(auth, email, password)
+.then(() => {
+    alert("Login Successful 🚀");
+    window.location.href = "index.html";
+})
+.catch((error) => {
+    alert(error.message);
+});
+
+}
 alert("Login system will be connected soon 🚀");
 }
-</script>
-
+<script type="module">
 </body>
 </html>
