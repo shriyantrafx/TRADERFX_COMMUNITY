@@ -71,9 +71,7 @@ text-decoration:none;
 
 <input type="password" placeholder="Confirm Password">
 
-<button onclick="signup()">Signup</button>
-Create Account
-</button>
+<button onclick="signup()">Create Account</button>
 
 <p>
 Already have an account?
@@ -81,9 +79,9 @@ Already have an account?
 </p>
 
 </div>
-
-<script>
+<script type="module">
 import { auth } from "./firebase.js";
+
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 window.signup = function(){
@@ -101,8 +99,7 @@ createUserWithEmailAndPassword(auth, email, password)
 });
 
 }
-alert("Account system will be connected soon 🚀");
-}
+
 </script>
 <script type="module" src="firebase.js"></script>
 </body>
