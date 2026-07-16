@@ -12,9 +12,44 @@ nav{position:fixed;bottom:0;left:0;right:0;background:#111827;display:flex;justi
 button{background:#00bfff;color:#fff;border:none;padding:10px 14px;border-radius:8px}
 </style></head>
 <body>
-<header><div class="logo">TradersFX Community</div><button onclick="alert('Theme coming soon')">🌙</button></header>
+<header>
+<div class="logo">TradersFX Community</div>
+
+<div>
+<button onclick="openPost()">➕ Post</button>
+<button onclick="alert('Theme coming soon')">🌙</button>
+</div>
+</header>
+
 <div class="search">🔍 Search traders...</div>
-<div class="card"><h3>📈 Admin Signal</h3><p>XAUUSD BUY<br>Entry: 3350<br>TP:3365<br>SL:3340</p><div class="actions"><button>❤️ Like</button><button>💬 Comment</button><button>📤 Share</button></div></div>
-<div class="card"><h3>👤 Community Feed</h3><p>Members' posts will appear here.</p></div>
+<div class="card">
+<h3>📈 Admin Signal</h3>
+<p>XAUUSD BUY</p>
+<p>Entry: 3350</p>
+<p>TP: 3365</p>
+<p>SL: 3340</p>
+
+<div class="actions">
+<button>❤️ Like</button>
+<button>💬 Comment</button>
+<button>📤 Share</button>
+</div>
+</div>
+
+<div class="card">
+<h3>👥 Community Feed</h3>
+<p>Members' posts will appear here.</p>
+</div>
+
+
 <nav><span>🏠</span><span>🎥</span><span>➕</span><span>💬</span><span>👤</span></nav>
-</body></html>
+
+<script>
+function openPost() {
+    alert("Create Post page coming soon 🚀");
+}
+</script>
+
+</body>
+</html>
+
