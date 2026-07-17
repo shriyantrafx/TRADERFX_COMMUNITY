@@ -170,7 +170,7 @@ function animate(){
     drawCandles();
 
     drawParticles();
-    drawMarketLight();
+
     requestAnimationFrame(animate);
 
 }
