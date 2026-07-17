@@ -71,9 +71,10 @@ const color = green ? "#22c55e" : "#ef4444";
 
 ctx.strokeStyle = color;
 ctx.fillStyle = color;
-
-ctx.shadowBlur = 20;
+ctx.shadowBlur = 35;
 ctx.shadowColor = color;
+ctx.globalAlpha = 0.85;
+
 
 // Wick
 ctx.beginPath();
@@ -95,7 +96,7 @@ candle.x -= 2;
 });
 
 ctx.shadowBlur = 0;
-
+ctx.globalAlpha = 1;
 }
 
 setInterval(createCandle,350);
