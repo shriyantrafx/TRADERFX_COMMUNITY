@@ -175,9 +175,7 @@ function animate(){
 
 }
 
-animate();
 
-animate();
 // ===== Premium Market Glow =====
 
 const glow = {
