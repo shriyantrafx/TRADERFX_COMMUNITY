@@ -99,17 +99,7 @@ ctx.shadowBlur = 0;
 }
 
 setInterval(createCandle,350);
-// ===== Animation Loop =====
 
-function animate(){
-
-    drawCandles();
-     drawParticles();
-    requestAnimationFrame(animate);
-
-}
-
-animate();
 // ===== Floating Particles Effect =====
 
 const particles = [];
