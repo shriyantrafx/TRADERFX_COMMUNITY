@@ -104,9 +104,72 @@ setInterval(createCandle,350);
 function animate(){
 
     drawCandles();
-
+    
+drawParticles();
     requestAnimationFrame(animate);
 
 }
 
 animate();
+// ===== Floating Particles Effect =====
+
+const particles = [];
+
+function createParticle(){
+
+    particles.push({
+
+        x: Math.random() * canvas.width,
+
+        y: canvas.height + 20,
+
+        size: Math.random() * 3 + 1,
+
+        speed: Math.random() * 0.8 + 0.2,
+
+        opacity: Math.random()
+
+    });
+
+}
+
+
+function drawParticles(){
+
+    particles.forEach((p,index)=>{
+
+        ctx.beginPath();
+
+        ctx.arc(
+            p.x,
+            p.y,
+            p.size,
+            0,
+            Math.PI*2
+        );
+
+        ctx.fillStyle = 
+        `rgba(0,191,255,${p.opacity})`;
+
+        ctx.shadowBlur = 15;
+
+        ctx.shadowColor="#00bfff";
+
+        ctx.fill();
+
+
+        p.y -= p.speed;
+
+
+        if(p.y < -20){
+
+            particles.splice(index,1);
+
+        }
+
+    });
+
+}
+
+
+setInterval(createParticle,200);
