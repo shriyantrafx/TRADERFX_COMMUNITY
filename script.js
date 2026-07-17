@@ -168,8 +168,62 @@ function animate(){
 
     drawParticles();
 
+    drawMarketGlow();
+
     requestAnimationFrame(animate);
 
 }
 
 animate();
+// ===== Premium Market Glow =====
+
+const glow = {
+    x: 0,
+    y: 0,
+    radius: 250
+};
+
+
+function drawMarketGlow(){
+
+    const gradient = ctx.createRadialGradient(
+        glow.x,
+        glow.y,
+        0,
+        glow.x,
+        glow.y,
+        glow.radius
+    );
+
+
+    gradient.addColorStop(
+        0,
+        "rgba(0,191,255,0.18)"
+    );
+
+    gradient.addColorStop(
+        1,
+        "rgba(0,191,255,0)"
+    );
+
+
+    ctx.fillStyle = gradient;
+
+
+    ctx.fillRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+
+    glow.x += 0.8;
+
+    if(glow.x > canvas.width + 300){
+
+        glow.x = -300;
+
+    }
+
+}
