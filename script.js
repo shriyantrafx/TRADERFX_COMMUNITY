@@ -164,15 +164,19 @@ function drawParticles(){
 setInterval(createParticle,200);
 function animate(){
 
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    drawMarketGlow();
+
     drawCandles();
 
     drawParticles();
 
-    drawMarketGlow();
-
     requestAnimationFrame(animate);
 
 }
+
+animate();
 
 animate();
 // ===== Premium Market Glow =====
