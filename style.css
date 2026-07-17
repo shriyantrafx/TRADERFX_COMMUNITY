@@ -123,3 +123,137 @@ body{
     font-size:13px;
 
 }
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    width:100%;
+    min-height:calc(100vh - 110px);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    padding:40px 60px;
+}
+
+.hero-left{
+    flex:1;
+    max-width:620px;
+}
+
+.hero-left h1{
+    font-size:64px;
+    line-height:1.1;
+    font-weight:800;
+    margin-bottom:25px;
+}
+
+.hero-left h1 span{
+    color:#00bfff;
+    text-shadow:0 0 20px rgba(0,191,255,.6);
+}
+
+.hero-left p{
+    color:#cbd5e1;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
+    max-width:520px;
+}
+
+.buttons{
+    display:flex;
+    gap:18px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:16px 30px;
+    border-radius:14px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn.primary{
+    background:#00bfff;
+    color:#fff;
+    box-shadow:0 0 25px rgba(0,191,255,.45);
+}
+
+.btn.primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn.secondary{
+    border:1px solid rgba(255,255,255,.25);
+    color:#fff;
+    background:rgba(255,255,255,.05);
+}
+
+.btn.secondary:hover{
+    border-color:#00bfff;
+}
+
+/* =========================
+   TABLET CARD
+========================= */
+
+.hero-right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.tablet{
+    width:520px;
+    background:rgba(15,23,42,.92);
+    border:1px solid rgba(0,191,255,.25);
+    border-radius:28px;
+    padding:24px;
+    backdrop-filter:blur(18px);
+    box-shadow:
+        0 0 40px rgba(0,191,255,.18);
+}
+
+.tablet-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.tablet-top h2{
+    color:#fff;
+}
+
+.live-badge{
+    background:#00bfff;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.chart-placeholder{
+    height:240px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#7dd3fc;
+    border:1px dashed rgba(0,191,255,.35);
+    background:#08111f;
+}
+
+.market-list{
+    margin-top:22px;
+}
+
+.market-item{
+    display:flex;
+    justify-content:space-between;
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
