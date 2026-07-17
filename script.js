@@ -170,7 +170,7 @@ function animate(){
     drawCandles();
 
     drawParticles();
-
+    drawMarketLight();
     requestAnimationFrame(animate);
 
 }
@@ -226,6 +226,58 @@ function drawMarketGlow(){
     if(glow.x > canvas.width + 300){
 
         glow.x = -300;
+
+    }
+
+}
+// ===== TradersFX Market Light Effect =====
+
+let marketLightX = -300;
+
+
+function drawMarketLight(){
+
+    const gradient = ctx.createLinearGradient(
+        marketLightX,
+        0,
+        marketLightX + 300,
+        0
+    );
+
+
+    gradient.addColorStop(
+        0,
+        "rgba(0,191,255,0)"
+    );
+
+    gradient.addColorStop(
+        0.5,
+        "rgba(0,191,255,0.08)"
+    );
+
+    gradient.addColorStop(
+        1,
+        "rgba(0,191,255,0)"
+    );
+
+
+    ctx.fillStyle = gradient;
+
+
+    ctx.fillRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+
+    marketLightX += 2;
+
+
+    if(marketLightX > canvas.width){
+
+        marketLightX = -300;
 
     }
 
