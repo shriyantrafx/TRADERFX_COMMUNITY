@@ -29,32 +29,36 @@ function random(min,max){
 return Math.random()*(max-min)+min;
 
 }
-
 function createCandle(){
 
-const open=random(120,500);
+let open = Math.random()*300 + 100;
 
-const close=open+random(-70,70);
+let close = open + (Math.random()-0.5)*80;
+
 
 candles.push({
 
-x:canvas.width+40,
+    x: canvas.width + 40,
 
-open,
+    open: open,
 
-close,
+    close: close,
 
-high:Math.max(open,close)+random(10,35),
+    high: Math.max(open,close) - 40,
 
-low:Math.min(open,close)-random(10,35),
+    low: Math.min(open,close) + 40
 
 });
 
-if(candles.length>70){
 
-candles.shift();
+if(candles.length > 50){
+
+    candles.shift();
 
 }
+
+}
+
 
 }
 // ===== Draw Candles =====
