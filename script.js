@@ -2,10 +2,15 @@
 
 const bg = document.querySelector(".background");
 
+
 const canvas = document.createElement("canvas");
 
-bg.appendChild(canvas);
+canvas.style.position = "absolute";
+canvas.style.top = "0";
+canvas.style.left = "0";
+canvas.style.zIndex = "10";
 
+bg.appendChild(canvas);
 const ctx = canvas.getContext("2d");
 
 function resizeCanvas(){
