@@ -104,8 +104,7 @@ setInterval(createCandle,350);
 function animate(){
 
     drawCandles();
-    
-drawParticles();
+     drawParticles();
     requestAnimationFrame(animate);
 
 }
