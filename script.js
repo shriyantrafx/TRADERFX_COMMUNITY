@@ -172,3 +172,14 @@ function drawParticles(){
 
 
 setInterval(createParticle,200);
+function animate(){
+
+    drawCandles();
+
+    drawParticles();
+
+    requestAnimationFrame(animate);
+
+}
+
+animate();
