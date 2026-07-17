@@ -204,24 +204,17 @@ body{
     display:flex;
     justify-content:center;
 }
-
 .tablet{
-    width:620px;
-    min-height:720px;
-
+    width:520px;
     background:rgba(15,23,42,.92);
-
     border:1px solid rgba(0,191,255,.25);
-
-    border-radius:35px;
-
-    padding:30px;
-
+    border-radius:28px;
+    padding:24px;
     backdrop-filter:blur(18px);
-
     box-shadow:
-        0 0 60px rgba(0,191,255,.25);
+        0 0 40px rgba(0,191,255,.18);
 }
+
 .tablet-top{
     display:flex;
     justify-content:space-between;
